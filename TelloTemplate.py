@@ -41,7 +41,11 @@ recvThread = threading.Thread(target=recv)
 recvThread.start()
 
 
-# CREATE FUNCTIONS HERE....
+# Square function with a for loop
+def square():
+    for i in range(4):
+        sendmsg('forward 100')
+        sendmsg('ccw 90')
 
 
 print("\nIsaiah Walters")
@@ -56,13 +60,10 @@ try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
-        sendmsg('command', 0)
-        sendmsg('takeoff')
+        sendmsg('command')
+        sendmsg('takeoff',8)
 
-        #make a square within a for loop
-        for i in range(4):
-            sendmsg('forward 100')
-            sendmsg('ccw 90')
+        square()
 
         sendmsg('land')
         print('\nGreat Flight!!!')
