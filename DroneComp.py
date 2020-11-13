@@ -43,23 +43,23 @@ recvThread.start()
 #create functions here...
 # Square function with a for loop
 # Drone goes through first hula hoop
-def firsthoop():
-
-
+def first_hoop():
+    sendmsg('up 75')
+    sendmsg('forward 200')
 #drone goes through second hoop
-def second_hoop():
+#def second_hoop():
 
 
 #drones mission through third hula hoop with a yaw
-def thirdhoopYaw():
-
+#def third_hoop():
+    #sendmsg('up 200')
 
 #drones mission through fourth hoop
-def fourthhoop():
-
+#def fourth_hoop():
+    #sendmsg('up 12')
 #do a flip to celebrate completion
-def celebration():
-    
+#def celebration():
+    #sendmsg('up 2000')
 print("\nIsaiah Walters")
 print("Program Name: Drone Competition")
 print("Date: 11.13.2020")
@@ -76,7 +76,7 @@ try:
         sendmsg('takeoff',8)
 
         #square()
-        firsthoop()
+        first_hoop()
         sendmsg('land')
         print('\nGreat Flight!!!')
 
