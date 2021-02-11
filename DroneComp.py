@@ -44,8 +44,7 @@ recvThread.start()
 # Square function with a for loop
 # Drone goes through first hula hoop
 def first_hoop():
-    sendmsg('up 75')
-    sendmsg('forward 200')
+    sendmsg('forward 220')
 #drone goes through second hoop
 #def second_hoop():
 
