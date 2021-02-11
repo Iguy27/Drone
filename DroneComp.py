@@ -46,8 +46,8 @@ recvThread.start()
 def first_hoop():
     sendmsg('forward 220')
 #drone goes through second hoop
-#def second_hoop():
-
+def second_hoop():
+    sendmsg('go 300 0 100 75')
 
 #drones mission through third hula hoop with a yaw
 #def third_hoop():
@@ -76,9 +76,9 @@ try:
 
         #square()
         first_hoop()
-        sendmsg('land')
-        print('\nGreat Flight!!!')
 
+        second_hoop()
+        sendmsg('land')
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
 except KeyboardInterrupt:
