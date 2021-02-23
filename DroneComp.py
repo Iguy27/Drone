@@ -47,15 +47,17 @@ def first_hoop():
     sendmsg('forward 220')
 #drone goes through second hoop
 def second_hoop():
-    sendmsg('go 300 0 100 75')
+    sendmsg('go 200 0 50 75')
 
 #drones mission through third hula hoop with a yaw
-#def third_hoop():
-    #sendmsg('up 200')
-
+def third_hoop():
+    sendmsg('ccw 90')
+    sendmsg('forward 290')
+    sendmsg('ccw 90')
+    #sendmsg('curve 50 100 0 50 100 0,40')
 #drones mission through fourth hoop
-#def fourth_hoop():
-    #sendmsg('up 12')
+def fourth_hoop():
+    sendmsg('go 200 0 -50 75')
 #do a flip to celebrate completion
 #def celebration():
     #sendmsg('up 2000')
@@ -76,8 +78,8 @@ try:
 
         #square()
         first_hoop()
-
         second_hoop()
+        third_hoop()
         sendmsg('land')
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
